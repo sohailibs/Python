@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>TableView - Startup</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <style>
+        div{
+            padding-top: 1%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+<h2 class="text-center"><u>Available Links</u>&nbsp;<a class="btn btn-primary" href="/">Search</a>&nbsp;<a class="btn btn-primary" href="/save">DownLoad File</a></h2><br>
+<table class="table">
+	<thead>
+	<tr>
+        <th>S.no</th>
+		<th>Url</th>
+	</tr>
+	</thead>
+	<tbody>
+	<!-- jinja2 Technique -->
+	{% if d %}
+	{% for i in d %}
+	<tr><td></td>
+		<td>{{i.Url}}</td>
+	</tr>
+	{% endfor %}
+	{% endif %}
+	</tbody>
+</table>
+</div>
+
+</body>
+</html>
